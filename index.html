@@ -5,232 +5,183 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Environment Strategy</title>
 
-  <style>
-    /* =========================
-       DESIGN SYSTEM
-       ========================= */
-    :root {
-      --ratio: 1.618;
-      --base: 18px;
-
-      /* Golden Ratio Type Scale */
-      --h2: calc(var(--base) * var(--ratio));   /* ~29px */
-      --h1: calc(var(--h2) * var(--ratio));     /* ~47px */
-
-      --line-height: 1.6;
-
-      /* Color Palette */
-      --navy: #001F3F;
-      --slate: #708090;
-      --white: #FFFFFF;
-      --teal: #008080;
-
-      --max-width: 1200px;
-      --radius: 8px;
-      --gap: 1.5rem;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: var(--base);
-      line-height: var(--line-height);
-      color: var(--navy);
-      background: var(--white);
-    }
-
-    /* =========================
-       HERO SECTION
-       ========================= */
-    header.hero {
-      background: var(--navy);
-      color: var(--white);
-      padding: 4rem 1.5rem;
-      text-align: center;
-    }
-
-    header.hero h1 {
-      font-size: var(--h1);
-      margin: 0 0 0.5rem;
-      line-height: 1.1;
-    }
-
-    header.hero h2 {
-      font-size: var(--h2);
-      margin: 0 0 1rem;
-      color: var(--teal);
-      font-weight: 600;
-    }
-
-    header.hero p {
-      max-width: 900px;
-      margin: 0 auto;
-      color: rgba(255, 255, 255, 0.95);
-    }
-
-    /* =========================
-       MAIN LAYOUT
-       ========================= */
-    main {
-      max-width: var(--max-width);
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--gap);
-    }
-
-    @media (min-width: 900px) {
-      main {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .full-width {
-        grid-column: 1 / -1;
-      }
-    }
-
-    section {
-      border: 1px solid rgba(112, 128, 144, 0.25);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      background: var(--white);
-    }
-
-    section h2 {
-      font-size: var(--h2);
-      margin-top: 0;
-    }
-
-    section h3 {
-      margin-bottom: 0.25rem;
-      font-size: 1.05rem;
-    }
-
-    p {
-      margin-top: 0;
-      color: var(--slate);
-    }
-
-    /* =========================
-       IMAGE PLACEHOLDERS
-       ========================= */
-    .image-placeholder {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      aspect-ratio: 16 / 9;
-      background: linear-gradient(135deg, #708090, #001F3F);
-      border-radius: 6px;
-      margin-bottom: 1rem;
-    }
-
-    /* =========================
-       FOOTER
-       ========================= */
-    footer {
-      background: var(--navy);
-      color: var(--white);
-      text-align: center;
-      padding: 1.5rem;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HERO -->
+  <!-- ================= HERO ================= -->
   <header class="hero">
-    <h1>Digital Environment Strategy</h1>
-    <h2>Executive Summary</h2>
-    <p>
-      Our goal is to move beyond simply building software to cultivating a resilient digital environment.
-      We balance technical excellence with fundamental human needs. By prioritizing systems design,
-      information architecture, user experience, and sustainability, we ensure our platform is robust,
-      trustworthy, and built for the long term.
-    </p>
+    <div class="container">
+      <h1>Digital Environment Strategy</h1>
+      <h2 class="subtitle">Executive Summary</h2>
+
+      <p>
+        Our goal is to move beyond simply building software to cultivating a resilient digital environment.
+        We balance technical excellence with fundamental human needs. By prioritizing systems design,
+        information architecture, user experience, and sustainability, we ensure our platform is robust,
+        trustworthy, and built for the long term.
+      </p>
+
+      <img
+        src="https://raw.githubusercontent.com/jshooz/Digital-Environment-Strategy/main/images/hero_Image_ja4zruja4zruja4z.png"
+        alt="Digital environment visualization"
+        class="responsive-image"
+      />
+    </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main>
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="container grid">
 
-    <!-- Systems Design -->
-    <section class="full-width">
-      <div class="image-placeholder"></div>
+    <!-- ===== Section 1 ===== -->
+    <section class="card">
       <h2>The Five Component Ecosystem</h2>
+
       <p>
         To build an effective environment, we look beyond the code. We treat the human side of the system
         with the same rigor as the technical side.
       </p>
 
+      <img
+        src="https://raw.githubusercontent.com/jshooz/Digital-Environment-Strategy/main/images/5ComponentFramework_qpo4vpqpo4vpqpo4.png"
+        alt="Five component ecosystem framework"
+        class="responsive-image"
+      />
+
       <h3>Hardware</h3>
-      <p><strong>Application:</strong> Define infrastructure needs, scalability, and physical environment constraints.</p>
-      <p><strong>Example Tasks:</strong> Determine cloud versus on-premise solutions and specify server capacities.</p>
+      <p>Define infrastructure needs, scalability, and physical environment constraints.</p>
 
       <h3>Software</h3>
-      <p><strong>Application:</strong> Define functional requirements, integration points, and the tech stack.</p>
-      <p><strong>Example Tasks:</strong> Specify programming languages and API definitions.</p>
+      <p>Define functional requirements, integration points, and the technical stack.</p>
 
       <h3>Data</h3>
-      <p><strong>Application:</strong> Define information architecture, governance, and privacy needs.</p>
-      <p><strong>Example Tasks:</strong> Design database schemas and establish data security protocols (Bourgeois et al., 2019).</p>
+      <p>
+        Define information architecture, governance, and privacy needs
+        (Bourgeois et al., 2019).
+      </p>
 
       <h3>Procedures</h3>
-      <p><strong>Application:</strong> Define operational workflows and standard operating procedures.</p>
-      <p><strong>Example Tasks:</strong> Map out data backup steps and maintenance schedules.</p>
+      <p>Define operational workflows and standard operating procedures.</p>
 
       <h3>People</h3>
-      <p><strong>Application:</strong> Identify stakeholders, required skills, and training needs.</p>
-      <p><strong>Example Tasks:</strong> Define roles and plan comprehensive training programs.</p>
+      <p>Identify stakeholders, required skills, and training needs.</p>
 
-      <p><strong>Core Priority:</strong> We adopt systems thinking to create dynamic interventions that we continuously monitor to prevent unintended negative consequences (Cababa, 2023).</p>
+      <p class="core-priority">
+        <strong>Core Priority:</strong> We adopt systems thinking to create dynamic interventions that we
+        continuously monitor to prevent unintended negative consequences (Cababa, 2023).
+      </p>
     </section>
 
-    <!-- Information Architecture -->
-    <section>
-      <div class="image-placeholder"></div>
+    <!-- ===== Section 2 ===== -->
+    <section class="card">
       <h2>Structural Integrity and Findability</h2>
+
       <p>
         Structure is the foundation of our digital space. If users cannot find information, the system has failed.
       </p>
-      <p><strong>Structure Before Form:</strong> We prioritize a stable semantic structure over fleeting visual trends to maintain user trust (Arango, 2018).</p>
-      <p><strong>Managing Ambiguity:</strong> We use exact organization schemes for specific searches and ambiguous organization schemes for browsing (Rosenfeld et al., 2015).</p>
-      <p><strong>Vocabulary:</strong> We implement a controlled vocabulary and use familiar metaphors to bridge the gap between complex code and the mental model of the user (Arango, 2018).</p>
+
+      <img
+        src="https://raw.githubusercontent.com/jshooz/Digital-Environment-Strategy/main/images/contentIA_Image_3p2nr43p2nr43p2n.png"
+        alt="Information architecture visualization"
+        class="responsive-image"
+      />
+
+      <h3>Structure Before Form</h3>
+      <p>
+        We prioritize a stable semantic structure over fleeting visual trends to maintain user trust
+        (Arango, 2018).
+      </p>
+
+      <h3>Managing Ambiguity</h3>
+      <p>
+        We use exact organization schemes for specific searches and ambiguous schemes for browsing
+        (Rosenfeld et al., 2015).
+      </p>
+
+      <h3>Vocabulary</h3>
+      <p>
+        We implement controlled vocabulary and familiar metaphors to align system logic with user mental models
+        (Arango, 2018).
+      </p>
     </section>
 
-    <!-- Sustainability -->
-    <section>
-      <div class="image-placeholder"></div>
+    <!-- ===== Section 3 ===== -->
+    <section class="card">
       <h2>Resilience and Stewardship</h2>
+
       <p>
         We do not just build. We maintain. We engineer our system to survive and evolve.
       </p>
-      <p><strong>Pace Layering:</strong> We use shearing layers to build a stable database structure that supports a fast moving interface (Arango, 2018).</p>
-      <p><strong>Stewardship:</strong> We view maintenance as an ongoing process of care required to prevent code and content decay.</p>
-      <p><strong>Shared Responsibility:</strong> We align incentives so that architects and developers prioritize safety and longevity over short term speed (Arango, 2018).</p>
+
+      <img
+        src="https://raw.githubusercontent.com/jshooz/Digital-Environment-Strategy/main/images/Infrasustainability_xpba0rxpba0rxpba.png"
+        alt="Infrastructure sustainability diagram"
+        class="responsive-image"
+      />
+
+      <h3>Pace Layering</h3>
+      <p>
+        We apply shearing layers to support a stable data foundation beneath a fast-moving interface
+        (Arango, 2018).
+      </p>
+
+      <h3>Stewardship</h3>
+      <p>
+        Maintenance is treated as an ongoing practice of care to prevent system decay.
+      </p>
+
+      <h3>Shared Responsibility</h3>
+      <p>
+        We align incentives so architects and developers prioritize longevity over short-term speed
+        (Arango, 2018).
+      </p>
     </section>
 
-    <!-- User Experience -->
-    <section>
-      <div class="image-placeholder"></div>
+    <!-- ===== Section 4 ===== -->
+    <section class="card">
       <h2>Building Trust and Preventing Errors</h2>
+
       <p>
         Good design is not just aesthetic. It is a critical system for safety and credibility.
       </p>
-      <p><strong>The UX Honeycomb:</strong> We ensure our product is useful, credible, and accessible in addition to being usable (Interaction Design Foundation, 2019).</p>
-      <p><strong>Visual Patterns:</strong> We use Gestalt principles to create clear hierarchies that reduce cognitive load.</p>
-      <p><strong>Usability as Security:</strong> We focus on error prevention. If a user cannot complete a task, it is a design failure rather than a user error (Nielsen, 2012).</p>
+
+      <img
+        src="https://raw.githubusercontent.com/jshooz/Digital-Environment-Strategy/main/images/UXhoneycomb_8pexh18pexh18pex.png"
+        alt="UX honeycomb model"
+        class="responsive-image"
+      />
+
+      <h3>The UX Honeycomb</h3>
+      <p>
+        We ensure products are useful, usable, credible, accessible, and valuable
+        (Interaction Design Foundation, 2019).
+      </p>
+
+      <h3>Visual Patterns</h3>
+      <p>
+        Gestalt principles create clear hierarchies that reduce cognitive load.
+      </p>
+
+      <h3>Usability as Security</h3>
+      <p>
+        Error prevention is prioritized; failure indicates a design flaw rather than user error
+        (Nielsen, 2012).
+      </p>
     </section>
 
   </main>
 
-  <footer>
-    © 2025 Digital Environment Strategy
+  <!-- ================= FOOTER ================= -->
+  <footer class="container footer">
+    <h4>References</h4>
+    <ul>
+      <li>Arango, J. (2018). <em>Living in Information</em>. Rosenfeld Media.</li>
+      <li>Bourgeois, D., et al. (2019). <em>Information Systems for Business and Beyond</em>.</li>
+      <li>Cababa, S. (2023). <em>Closing the Loop</em>. Rosenfeld Media.</li>
+      <li>Interaction Design Foundation. (2019). The 7 Factors that Influence User Experience.</li>
+      <li>Nielsen, J. (2012). Usability 101. Nielsen Norman Group.</li>
+      <li>Rosenfeld, L., Morville, P., & Arango, J. (2015). <em>Information Architecture</em>.</li>
+    </ul>
   </footer>
 
 </body>
